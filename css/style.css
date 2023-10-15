@@ -22,6 +22,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 :root{
@@ -62,7 +63,7 @@ body{
     background-color: #ddd;
 }
 .layout{
-    width: 600px;
+    width: 360px;
     margin:0 auto;
     background-color: #fff;
     min-height: 100vh;
@@ -114,4 +115,166 @@ body{
 }
 .back_btns button{
     margin-right: 44px;
+}
+.search_file{
+    width: 100%;
+    display: flex;
+    padding: 13px 7px 23px;
+    position: relative;
+    align-items: center;
+}
+.search_file .thumb{
+    margin-right: 16px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #525252;
+    position: relative;
+}
+.search_file .thumb .play_img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+
+}
+.search_file .file_name{
+    font-weight: 700;
+    color:#A6A6A6;
+    font-size: 16px;
+}
+.search_file .file_name p:first-child{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.search_file .file_del{
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.search_box{
+    background-color: #c4c4c4;
+    position: relative;
+    padding:54px 7px 15px;
+    min-height: 230px;
+}
+.search_box.close{
+    padding: 15px 0;
+    min-height: 0;
+    background-color: #f4f4f4;
+}
+.search_box .search_ico{
+    display: none;
+    
+}
+.search_box.close .search_ico{
+    display: block;
+    margin-left: 15px;
+}
+.search_box.close .search_visible_box{
+    display: none;
+}
+.search_box.close .arrow_btn{
+    transform: rotate(-180deg);
+}
+.search_box .arrow_btn{
+    position: absolute;
+    top: 11px;
+    right: 18px;
+}
+.search_input{
+    overflow: hidden;
+    height: 50px;
+    border: 1px solid #0070ff;
+    border-radius: 7px;
+    background-color: #fff;
+    position: relative;
+  
+    display: flex;
+    align-items: center;
+}
+.search_input>span{
+    padding-left: 14px;
+    padding-right: 7px;
+    margin-right: 5px;
+    position: relative;
+}
+.search_input>span::after{
+    content: "|";
+    font-size: 10px;
+    font-weight: bold;
+    color:#A6A6A6;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -5px;
+}
+.search_input input{
+    border:0;
+    font-size: 16px;
+    height: 100%;
+    width: 100%;
+}
+.search_input input:focus{
+    border:0;
+    outline: 0;
+}
+.search_box .upload_file{
+    background-color: #fff;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.search_box .upload_file img{
+    vertical-align: middle;
+    margin-left: 8px;
+    position: relative;
+    top: -1px;
+}
+.recommand_word_box{
+    padding: 24px 30px;
+}
+.recommand_word_box>p{
+    font-size: 16x;
+    margin-bottom: 14px;
+}
+.recommand_words{
+    display: flex;
+    flex-wrap: wrap;
+}
+.recommand_words label input{
+    display: none;
+}
+.recommand_words label span{
+    display: inline-block;
+    border:1px solid #c2c2c2;
+    padding: 8px 16px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    color:#c2c2c2;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.recommand_words label input:checked ~ span{
+    border:2px solid #FF1F00;
+    color:#FF1F00;
+
+}
+.ft_btn{
+    background-color: #0062E0;
+    width: calc(100% - 14px);
+    position: absolute;
+    left: 7px;
+    bottom: 0;
+    color:#fff;
+    border-radius: 10px;
+    height: 56px;
+    font-weight: 700;
+    font-size: 18px;
 }

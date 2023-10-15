@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <title>searchkon</title>
 </head>
 <body>
@@ -19,20 +21,35 @@
         <div class="content">
             <div class="home">
                 <form action="" class="search_form">
-                    <div class="search_box">
-                        <button type="button"><img src="images/arrow_up.png" alt=""></button>
-                        <div class="search_input">
-                            <span><img src="images/search_ico.png" alt=""></span>
-                            <input type="text" name="" value="" placeholder="검색어를 입력하세요.">
+                    <div class="search_file">
+                        <div class="thumb video no_thumb">
+                            <img src="images/play_ico.png" alt="" class="play_img">
                         </div>
-                        <button type="button" class="search_file">
-                            <span>Your-File-Here</span>
+                        <div class="file_name">
+                            <p>Your_File_Here.MP4</p>
+                            <p>00000, 00</p>
+                        </div>
+                        <button type="button" class="file_del">
                             <img src="images/file_close.png" alt="">
                         </button>
                     </div>
+                    <div class="search_box">
+                        <img src="images/search_b.png" alt="" class="search_ico">
+                        <button type="button" class="arrow_btn" onclick="searchOpen()"><img src="images/arrow_up.png" alt=""></button>
+                        <div class="search_visible_box">
+                            <div class="search_input">
+                                <span><img src="images/search_ico.png" alt=""></span>
+                                <input type="text" name="" value="" placeholder="검색어를 입력하세요.">
+                            </div>
+                            <button type="button" class="upload_file">
+                                <span>Your-File-Here</span>
+                                <img src="images/file_close.png" alt="">
+                            </button>
+                        </div>
+                    </div>
                     <div class="recommand_word_box">
                         <p>추천검색어</p>
-                        <div>
+                        <div class="recommand_words">
                             <label>
                                 <input type="checkbox" name="" id="" name="">
                                 <span>Kgirl</span> 
@@ -60,8 +77,21 @@
                         </div>
                     </div>
                 </form>
+                <button type="button" class="ft_btn">
+                    다 음
+                </button>
             </div>
+            
         </div>
     </div>
+    <script>
+        function searchOpen(){
+            if($(".search_visible_box").is(":visible")){
+                $(".search_box").addClass("close")
+            }else{
+                $(".search_box").removeClass("close")
+            }
+        }
+    </script>
 </body>
 </html>
