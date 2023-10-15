@@ -409,5 +409,37 @@ background-color: #fff ;
 .ad.red{
     background-color: #B50000;
 }
+.home{
+    position: relative;
+}
+.search_result2{
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+}
+.search_result2 p:first-child{
+    font-size: 100px;
+    font-weight: 500;
+    color:#0070FF;
+}
+.search_result2 p:nth-child(3){
+    color:#E83531;
+    font-size: 32px;
+}
 
+
+.search_result2 p{
+    font-weight: 300;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.ft_btn_v2{
+    width: 232px;
+    border-radius: 50px;
+    left: 50%;
+    margin-left: -126px;
+}
 

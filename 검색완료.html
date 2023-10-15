@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <title>searchkon</title>
+</head>
+<body>
+    <div class="layout">
+        <!-- 헤더 시작 // -->
+        <div id="hd" class="center">
+           <a href=""><img src="images/logo.png" alt=""></a>
+        </div>
+        <!-- 헤더  끝 -->
+        <div class="content">
+            <div class="home">
+                <div class="search_result2">
+                    <p>90%</p>
+                    <p>이상 확률의 콘텐츠가</p>
+                    <p><b>14</b>개</p>
+                    <p>검색되었습니다.</p>
+                </div>
+                <button type="button" class="ft_btn ft_btn_v2">
+                    확 인 하 기
+                </button>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        function searchOpen(){
+            if($(".search_visible_box").is(":visible")){
+                $(".search_box").addClass("close")
+            }else{
+                $(".search_box").removeClass("close")
+            }
+        }
+    </script>
+</body>
+</html>
