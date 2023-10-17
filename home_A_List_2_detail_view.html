@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <title>searchkon</title>
+</head>
+<body>
+    <div class="layout">
+        <!-- 헤더 시작 // -->
+        <div id="hd">
+            <div class="back_btns">
+                <button type="button" class="back_btn"><img src="images/back_ico.png" alt=""></button>
+                <span class="back_title">Title</span>
+            </div>
+        </div>
+        <!-- 헤더  끝 -->
+        <div class="content"> 
+            <div class="detail_thumb">
+                <img src="images/play_ico_b.png" alt="" class="play_ico">
+            </div>
+            <div class="detail_bar">
+                <button type="button" class="link" onclick="copyLink(this,'https://sit amet consectetur adipiscing elit.Natus maiores,possimus,nam corporis quae minus nulla')">
+                    
+                    <img src="images/link.png" alt="">
+                </button>
+                <button type="button" class="bookmark" onclick="checkBookmark(this)"></button>
+            </div>
+            <ul class="detail_txt_list">
+                <li><span>검색일자</span><p>2023-08-02 | 09:45</p></li>
+                <li><span>파일명</span><p>icon / android / 24 / link</p></li>
+                <li><span>일치율</span><p>99%</p></li>
+                <li><span>파일유형</span><p>MP4</p></li>
+                <li><span>파일크기</span><p>200MB  </p></li>
+                <li><span>영상크기</span><p>1920 X 1080  </p></li>
+                <li><span>SNS분류</span><p>인스타그램</p></li>
+                <li><span>URL</span><p>https://sit amet consectetur adipiscing elit.Natus maiores,possimus,nam corporis quae minus nulla  </p></li>
+            </ul>
+            <div class="detail_match">
+                <div class="original">
+                    <p>유사성 분석</p>
+                    <div class="circle_img"><img src="images/thumb1.png" alt=""></div>
+                    <p>원본</p>
+                </div>
+                <ul class="match_img_list">
+                    <li>
+                        <div class="circle_img"><img src="images/thumb1.png" alt=""></div>
+                        <p><span class="percent high_percent">90%</span><span class="timestamp">00:38</span></p>
+                    </li>
+                    <li>
+                        <div class="circle_img"><img src="images/thumb2.png" alt=""></div>
+                        <p><span class="percent ">65%</span><span class="timestamp">00:38</span></p>
+                    </li>
+                    <li>
+                        <div class="circle_img"><img src="images/thumb4.jpg" alt=""></div>
+                        <p><span class="percent ">50%</span><span class="timestamp">00:38</span></p>
+                    </li>
+                    <li>
+                        <div class="circle_img"><img src="images/thumb3.jpg" alt=""></div>
+                        <p><span class="percent">20%</span><span class="timestamp">00:38</span></p>
+                    </li>
+                    <li>
+                        <div class="circle_img"><img src="images/thumb1.png" alt=""></div>
+                        <p><span class="percent high_percent">90%</span><span class="timestamp">00:38</span></p>
+                    </li>
+                    <li>
+                        <div class="circle_img"><img src="images/thumb3.jpg" alt=""></div>
+                        <p><span class="percent">10%</span><span class="timestamp">00:38</span></p>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function checkBookmark(e){
+            const arr = e.classList;
+            if(arr.value.includes("on")){
+                e.classList.remove("on")
+            }else{
+                e.classList.add("on")
+            }
+        }
+        function copyLink(e,link){
+            window.navigator.clipboard.writeText(link).then(() => {
+                alert("링크를 복사했습니다.");
+            });
+        }
+    </script>
+     
+</body>
+</html>

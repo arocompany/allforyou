@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>searchkon</title>
 </head>
 <body>
@@ -11,9 +12,40 @@
         <!-- 헤더 시작 // -->
         <div id="hd">
             <a href="#n"><img src="images/logo.png" alt=""></a>
-            <button type="button" class="hambuger">
+            <button type="button" class="hambuger" onclick="menuOpen()">
                 <img src="images/hamburger.png" alt="">
             </button>
+        </div>
+        <script>
+            function menuOpen(){
+                $(".menu").show();
+            }
+            function menuClose(){
+                $(".menu").hide()
+            }
+        </script>
+        <div class="menu">
+            <button type="button" class="menu_close" onclick="menuClose()">
+                <img src="images/pop_close.png" alt="">
+            </button>
+           <ul>
+                <li>
+                    <a href="#n">홈</a>
+                </li>
+                <li>
+                    <a href="#n">모니터링</a>
+                </li>
+                <li class="active">
+                    <a href="#n">검색결과</a>
+                </li>
+                <li>
+                    <a href="#n">공지사항</a>
+                </li>
+                <li>
+                    <a href="#n">이력관리</a>
+                </li>
+                
+           </ul>     
         </div>
         <!-- 헤더  끝 -->
         <div class="content">
