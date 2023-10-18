@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>searchkon</title>
+</head>
+<body>
+    <div class="layout sky_gray">
+        <!-- 헤더 시작 // -->
+        <div id="hd">
+            <a href="#n"><img src="images/logo.png" alt=""></a>
+            <button type="button" class="hambuger" onclick="menuOpen()">
+                <img src="images/hamburger.png" alt="">
+            </button>
+        </div>
+        <script>
+            function menuOpen(){
+                $(".menu").show();
+            }
+            function menuClose(){
+                $(".menu").hide()
+            }
+        </script>
+        <div class="menu">
+            <button type="button" class="menu_close" onclick="menuClose()">
+                <img src="images/pop_close.png" alt="">
+            </button>
+           <ul>
+                <li>
+                    <a href="#n">홈</a>
+                </li>
+                <li>
+                    <a href="#n">모니터링</a>
+                </li>
+                <li class="active">
+                    <a href="#n">검색결과</a>
+                </li>
+                <li>
+                    <a href="#n">공지사항</a>
+                </li>
+                <li>
+                    <a href="#n">이력관리</a>
+                </li>
+                
+           </ul>     
+        </div>
+        <!-- 헤더  끝 -->
+        <div class="content">
+            <div class="notice_top">
+                <div class="notice_search">
+                    <span>공지사항</span>
+                    <div><img src="images/search_ico2.png" alt=""><input type="text" name="" value="" placeholder="검색어를 입력하세요."></div>
+                </div>
+                <div class="notice_tabs">
+                    <button type="button" class="active">All</button>
+                    <button type="button">공지</button>
+                    <button type="button">오류</button>
+                    <button type="button">안내</button>
+                    <button type="button">기타</button>
+                </div>
+            </div>
+            <div class="notice">
+                <ul>
+                    <li >
+                        <div class="title">
+                            <div>
+                                <p>가나다라마바사</p>
+                                <p>2023.10.02</p>
+                            </div>
+                            <button type="button" class="notice_arrow">
+                                <img src="images/down_arrow.png" alt="">
+                            </button>
+                        </div>
+                        <div class="con">
+                            고객은 매우 중요하며 고객은 고객이 따라갑니다. 지금은 활을 쫓을 때이고 미워할 때입니다. Aenean quis tincidunt felis, eu vulputate urna. 그는 이 거리에 살았다고 한다. 그러나 방아쇠를 당길 시간이 없습니다. Maecenas tincidunt는 광고가 필요하며 화살통은 초콜릿이 아닙니다. 내 엘리트야, 예상되는 시간에 대한 소프트 니즈야, 라고 eu mauris가 말했다. 아이들은 뒷마당에 투자하여 더 쉽게 돌볼 수 있습니다. 아이들은 질병과 노년과 아이들을 안고 살아가고 있으며 굶주림과 가난에 시달리고 있습니다. 전자레인지 또는 식기세척기. 부동산 투자가 없습니다. 불행히도, 축구는 때때로 크지만 소프트 코스입니다.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">
+                            <div>
+                                <p>가나다라마바사</p>
+                                <p>2023.10.02</p>
+                            </div>
+                            <button type="button" class="notice_arrow">
+                                <img src="images/down_arrow.png" alt="">
+                            </button>
+                        </div>
+                        <div class="con">
+                            고객은 매우 중요하며 고객은 고객이 따라갑니다. 지금은 활을 쫓을 때이고 미워할 때입니다. Aenean quis tincidunt felis, eu vulputate urna. 그는 이 거리에 살았다고 한다. 그러나 방아쇠를 당길 시간이 없습니다. Maecenas tincidunt는 광고가 필요하며 화살통은 초콜릿이 아닙니다. 내 엘리트야, 예상되는 시간에 대한 소프트 니즈야, 라고 eu mauris가 말했다. 아이들은 뒷마당에 투자하여 더 쉽게 돌볼 수 있습니다. 아이들은 질병과 노년과 아이들을 안고 살아가고 있으며 굶주림과 가난에 시달리고 있습니다. 전자레인지 또는 식기세척기. 부동산 투자가 없습니다. 불행히도, 축구는 때때로 크지만 소프트 코스입니다.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".notice li").click(function(){
+            if($(this).find(".con").is(":visible")){
+                
+                $(this).find(".con").slideUp(function(){
+                    $(".notice li").removeClass("on");
+                });
+            }else{
+                $(".notice li").removeClass("on")
+                $(".notice li .con").slideUp();
+                $(this).addClass("on");
+                $(this).find(".con").slideDown();
+            }    
+        })
+    </script>
+</body>
+</html>

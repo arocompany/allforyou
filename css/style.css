@@ -81,6 +81,9 @@ body{
 #hd.center{
     justify-content: center;
 }
+#hd.right{
+    justify-content: end;
+}
 .home{
     position: relative;
     min-height:calc(100vh - 88px);
@@ -279,7 +282,7 @@ body{
     width: calc(100% - 14px);
     position: absolute;
     left: 7px;
-    bottom: 0;
+    bottom: 25px;
     color:#fff;
     border-radius: 10px;
     height: 56px;
@@ -428,6 +431,7 @@ background-color: #fff ;
     text-align: center;
     width: 100%;
 }
+
 .search_result2 p:first-child{
     font-size: 100px;
     font-weight: 500;
@@ -444,6 +448,26 @@ background-color: #fff ;
     font-size: 12px;
     margin-bottom: 5px;
 }
+
+.search_result3{
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+}
+.search_result3 p{
+    color:#828282; 
+    font-size: 14px;
+}
+.search_result3 p:first-child{
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color:#000;
+}
+
 .ft_btn_v2{
     width: 232px;
     border-radius: 50px;
@@ -841,10 +865,168 @@ background-color: #fff ;
 
 
 
+.loading{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+
+.loading span{
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    border: 9px solid #0062E0;
+    margin-right: 10px;
+    /* animation: loading 1.6s 0s linear infinite; */
+    animation: bounce 1.2s cubic-bezier(0.3, 0.01, 0.4, 1) infinite;
+}
+.loading span:last-child{
+    margin-right: 0;
+}
+
+.loading span:nth-child(1){
+    animation-delay: -0.4s;
+}
+
+.loading span:nth-child(2){
+    border-color: #FF0000;
+    animation-delay: -0.2s;
+}
+.loading span:nth-child(3){
+    border-color: #34A853;
+    animation-delay: 0s;
+}
+
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+@keyframes loading{
+    0%,
+    100%{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
 
 
 
+.layout.sky_gray{
+    background-color: #F7F7F7;
+}
+.notice_top{
+    padding: 24px;
+}
+.notice_search{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.notice_search span{
+    font-weight: 800;
+    font-size: 16px;
+    margin-right: 14px;
+}
+.notice_search input{
+    border:0;
+    width: 100%;
+    height: 40px;
+    border-radius: 30px;
+    padding-left: 33px;
+    box-sizing: border-box;
+}
+.notice_search input::placeholder{
+    color:#bebebe;
+    font-weight: 400;
+    font-size: 12px;
+}
+.notice_tabs{
+    display: flex;
+   
+    margin-bottom: 18px;
+}
+.notice_tabs button{
+    color: #262626;
+    font-size: 14px;
+    min-width: 50px;
+    margin-right: 10px;
+    padding: 5px 0;
+}
+.notice_tabs button:last-child{
+    margin-right: 0;
+}
+.notice_tabs button.active{
+    background-color: #0062E0;
+    color:#fff;
+    border-radius: 30px;
+    
+}
+.notice_search>div{
+    flex: 1;
+    position: relative;
+}
+.notice_search>div img{
+    position: absolute;
+    left: 12px;
+    top: 12px;
+}
+.notice_search input:focus{
+    border: 2px solid #0062E0;
+    outline: none;
+}
 
+.notice{
+    background-color: #fff;
+}
+.notice ul li{
+    cursor: pointer;
+    padding: 18px 24px 0;
+    border-bottom: 1px solid #E9E9E9;
+}
+.notice ul li .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding-bottom: 20px;
+}
+.notice ul li.on .title{
+    border-bottom: 1px solid #525252;
+}
+.notice ul li .title p{
+    color:#bebebe;
+    font-size: 12px;
+}
+.notice ul li .title p:first-child{
+    color: #212121;
+    font-weight: 700;
+    font-size: 16px;  
+    margin-bottom: 10px; 
+}
+.notice ul li.on .notice_arrow img{
+    transform: rotate(-180deg);
+}
+.notice ul li .con{
+    display: none;
+    padding-top: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 30px;
+    word-break: keep-all;
+}
 @media(max-width:800px){
     .layout{
         width: 100%;
