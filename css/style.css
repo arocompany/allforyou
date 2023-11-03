@@ -67,7 +67,7 @@ body{
     background-color: #ddd;
 }
 .layout{
-    width: 780px;
+    width: 500px;
     margin:0 auto;
     background-color: #fff;
     min-height: 100vh;
@@ -310,6 +310,7 @@ body{
     align-items: center;
     margin-top: 8px;
 }
+
 .sns_labels label>div{
     display: inline-block;
     border:1px solid #f1f1f1;
